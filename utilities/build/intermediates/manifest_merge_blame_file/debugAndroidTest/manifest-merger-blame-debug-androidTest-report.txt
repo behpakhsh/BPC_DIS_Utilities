@@ -1,0 +1,40 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="bpc.dis.utilities.test" >
+4
+5    <uses-sdk
+5-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7340150943863461770.xml:5:5-74
+6        android:minSdkVersion="15"
+6-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7340150943863461770.xml:5:15-41
+7        android:targetSdkVersion="29" />
+7-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7340150943863461770.xml:5:42-71
+8
+9    <instrumentation
+9-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7340150943863461770.xml:11:5-15:72
+10        android:name="androidx.test.runner.AndroidJUnitRunner"
+10-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7340150943863461770.xml:11:22-76
+11        android:functionalTest="false"
+11-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7340150943863461770.xml:14:22-52
+12        android:handleProfiling="false"
+12-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7340150943863461770.xml:13:22-53
+13        android:label="Tests for bpc.dis.utilities.test"
+13-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7340150943863461770.xml:15:22-70
+14        android:targetPackage="bpc.dis.utilities.test" />
+14-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7340150943863461770.xml:12:22-68
+15
+16    <uses-permission android:name="android.permission.CALL_PHONE" />
+16-->[__tested_artifact__::utilities] D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-69
+16-->[__tested_artifact__::utilities] D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-66
+17
+18    <application
+18-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7340150943863461770.xml:7:5-9:19
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.0.1] C:\Users\h.sohrabifard\.gradle\caches\transforms-2\files-2.1\72b2b92ec4ab73ff21fb9bc348de3b22\core-1.0.1\AndroidManifest.xml:22:18-86
+20        android:debuggable="true" >
+20-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7340150943863461770.xml:7:18-43
+21        <uses-library android:name="android.test.runner" />
+21-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7340150943863461770.xml:8:9-60
+21-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7340150943863461770.xml:8:23-57
+22    </application>
+23
+24</manifest>
