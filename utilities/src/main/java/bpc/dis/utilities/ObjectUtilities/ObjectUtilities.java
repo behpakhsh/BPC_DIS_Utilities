@@ -1,9 +1,9 @@
-package bpc.dis.utilities.ObjectUtils;
+package bpc.dis.utilities.ObjectUtilities;
 
 import java.util.List;
 import java.util.Map;
 
-public class ObjectUtils {
+public class ObjectUtilities {
 
     public static boolean isNull(Object object) {
         return object == null;
