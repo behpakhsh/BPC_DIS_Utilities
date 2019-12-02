@@ -95,4 +95,12 @@ public class StringUtilities {
         return formattedValue.replace(",", "");
     }
 
+    /**
+     * @deprecated use PhoneNumberHelper
+     */
+    @Deprecated
+    public static boolean isValidPhoneNumber(String phone) {
+        return !StringUtilities.isNullOrEmpty(phone) && !StringUtilities.isNotNumber(phone) && phone.length() == 11 && phone.startsWith("09");
+    }
+
 }
