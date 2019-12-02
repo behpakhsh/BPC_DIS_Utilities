@@ -6,6 +6,10 @@ import android.widget.TextView;
 
 public class TextSizeHelper {
 
+    /**
+     * @deprecated this method, please use MeasureHelper Class
+     */
+    @Deprecated
     public static void changeTextSizeWithDipUnit(Context context, TextView textView, float textSize) {
         textView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, (textSize / context.getResources().getDisplayMetrics().density));
     }
