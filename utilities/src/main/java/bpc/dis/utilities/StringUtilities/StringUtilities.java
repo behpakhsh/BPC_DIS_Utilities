@@ -8,7 +8,7 @@ import java.text.DecimalFormat;
 @SuppressLint("DefaultLocale")
 public class StringUtilities {
 
-    static boolean isNotNumber(String input) {
+    public static boolean isNotNumber(String input) {
         return input.replaceAll("[0-9]", "").length() != 0;
     }
 
@@ -93,10 +93,6 @@ public class StringUtilities {
 
     public static String convertCurrencyToString(String formattedValue) {
         return formattedValue.replace(",", "");
-    }
-
-    public static boolean isValidPhoneNumber(String phone) {
-        return !isNullOrEmpty(phone) && !isNotNumber(phone) && phone.length() == 11 && phone.startsWith("09");
     }
 
 }
