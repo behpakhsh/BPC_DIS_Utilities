@@ -2,11 +2,14 @@ package bpc.dis.utilities.Base64Helper;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.util.Base64;
 
 import java.io.ByteArrayOutputStream;
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 
-public class Base64Helper {
+public class DecoderHelper {
 
     private final static int quality = 100;
 
@@ -19,6 +22,20 @@ public class Base64Helper {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.PNG, quality, outputStream);
         return Base64.encodeToString(outputStream.toByteArray(), Base64.DEFAULT);
+    }
+
+    public static String stringToBase64(String s) {
+        byte[] data = new byte[0];
+        try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                data = s.getBytes(StandardCharsets.UTF_8);
+            } else {
+                data = s.getBytes("UTF-8");
+            }
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return Base64.encodeToString(data, Base64.DEFAULT);
     }
 
 }
