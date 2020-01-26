@@ -35,7 +35,7 @@ public class DeviceInfoHelper {
         return deviceInfo;
     }
 
-    private static String getDeviceUniqueId(Context context) {
+    public static String getDeviceUniqueId(Context context) {
         return Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID) + "_" + Build.SERIAL;
     }
 
