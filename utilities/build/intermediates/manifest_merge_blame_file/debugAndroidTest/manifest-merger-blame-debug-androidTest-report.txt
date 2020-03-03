@@ -3,38 +3,38 @@
 3    package="bpc.dis.utilities.test" >
 4
 5    <uses-sdk
-5-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8625728320112290361.xml:5:5-74
+5-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2758829374358487163.xml:5:5-74
 6        android:minSdkVersion="15"
-6-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8625728320112290361.xml:5:15-41
+6-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2758829374358487163.xml:5:15-41
 7        android:targetSdkVersion="29" />
-7-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8625728320112290361.xml:5:42-71
+7-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2758829374358487163.xml:5:42-71
 8
 9    <instrumentation
-9-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8625728320112290361.xml:11:5-15:72
+9-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2758829374358487163.xml:11:5-15:72
 10        android:name="androidx.test.runner.AndroidJUnitRunner"
-10-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8625728320112290361.xml:11:22-76
+10-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2758829374358487163.xml:11:22-76
 11        android:functionalTest="false"
-11-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8625728320112290361.xml:14:22-52
+11-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2758829374358487163.xml:14:22-52
 12        android:handleProfiling="false"
-12-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8625728320112290361.xml:13:22-53
+12-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2758829374358487163.xml:13:22-53
 13        android:label="Tests for bpc.dis.utilities.test"
-13-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8625728320112290361.xml:15:22-70
+13-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2758829374358487163.xml:15:22-70
 14        android:targetPackage="bpc.dis.utilities.test" />
-14-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8625728320112290361.xml:12:22-68
+14-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2758829374358487163.xml:12:22-68
 15
 16    <uses-permission android:name="android.permission.CALL_PHONE" />
 16-->[__tested_artifact__::utilities] D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-69
 16-->[__tested_artifact__::utilities] D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-66
 17
 18    <application
-18-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8625728320112290361.xml:7:5-9:19
+18-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2758829374358487163.xml:7:5-9:19
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.1.0] C:\Users\h.sohrabifard\.gradle\caches\transforms-2\files-2.1\c527b78844be871c44103f6f45a963fb\core-1.1.0\AndroidManifest.xml:24:18-86
+19-->[androidx.core:core:1.1.0] C:\Users\h.sohrabifard\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:18-86
 20        android:debuggable="true" >
-20-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8625728320112290361.xml:7:18-43
+20-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2758829374358487163.xml:7:18-43
 21        <uses-library android:name="android.test.runner" />
-21-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8625728320112290361.xml:8:9-60
-21-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8625728320112290361.xml:8:23-57
+21-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2758829374358487163.xml:8:9-60
+21-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\utilities\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2758829374358487163.xml:8:23-57
 22    </application>
 23
 24</manifest>

@@ -15,7 +15,7 @@
 12        android:allowBackup="true"
 12-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-13-->[androidx.core:core:1.0.1] C:\Users\h.sohrabifard\.gradle\caches\transforms-2\files-2.1\72b2b92ec4ab73ff21fb9bc348de3b22\core-1.0.1\AndroidManifest.xml:22:18-86
+13-->[androidx.core:core:1.1.0] C:\Users\h.sohrabifard\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:18-86
 14        android:debuggable="true"
 15        android:icon="@mipmap/ic_launcher"
 15-->D:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:7:9-43
