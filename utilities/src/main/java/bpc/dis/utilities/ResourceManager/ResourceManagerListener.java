@@ -8,9 +8,9 @@ import androidx.annotation.DrawableRes;
 
 public interface ResourceManagerListener {
 
-    int getDimension(@DimenRes int id);
+    float getDimension(@DimenRes int resId);
 
-    int getColor(@ColorRes int id);
+    int getColor(@ColorRes int resId);
 
     Drawable getDrawable(@DrawableRes int resId);
 
