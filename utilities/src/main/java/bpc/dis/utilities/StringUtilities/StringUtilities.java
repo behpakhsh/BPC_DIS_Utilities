@@ -8,6 +8,19 @@ import java.text.DecimalFormat;
 @SuppressLint("DefaultLocale")
 public class StringUtilities {
 
+    public static boolean stringContainsEnglish(String string) {
+        for (char character : string.toCharArray()) {
+            Character.UnicodeBlock unicodeBlock = Character.UnicodeBlock.of(character);
+            if (unicodeBlock == Character.UnicodeBlock.BASIC_LATIN ||
+                    unicodeBlock == Character.UnicodeBlock.LATIN_1_SUPPLEMENT ||
+                    unicodeBlock == Character.UnicodeBlock.LATIN_EXTENDED_A ||
+                    unicodeBlock == Character.UnicodeBlock.GENERAL_PUNCTUATION) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static boolean isNotNumber(String input) {
         return input.replaceAll("[0-9]", "").length() != 0;
     }
