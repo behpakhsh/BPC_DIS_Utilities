@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BPC_DIS_Utilities.iml" filepath="$PROJECT_DIR$/BPC_DIS_Utilities.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/utilities/utilities.iml" filepath="$PROJECT_DIR$/utilities/utilities.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BPC_DIS_Utilities.iml" filepath="$PROJECT_DIR$/BPC_DIS_Utilities.iml" group="BPC_DIS_Utilities" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="BPC_DIS_Utilities/app" />
+      <module fileurl="file://$PROJECT_DIR$/utilities/utilities.iml" filepath="$PROJECT_DIR$/utilities/utilities.iml" group="BPC_DIS_Utilities/utilities" />
     </modules>
   </component>
 </project>
