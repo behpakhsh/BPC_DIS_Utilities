@@ -12,7 +12,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import bpc.dis.utilities.VectorHelper.VectorHelper;
 
@@ -49,22 +48,8 @@ public class GoogleMapHelper {
         googleMap.addMarker(markerOptions).showInfoWindow();
     }
 
-    public static void moveCameraBetweenPoints(GoogleMap googleMap, LatLng point1, LatLng point2) {
-        List<LatLng> points = new ArrayList<>();
-        points.add(point1);
-        points.add(point2);
-        double minLat = 0;
-        double maxLat = 0;
-        double minLon = 0;
-        double maxLon = 0;
-        for (LatLng point : points) {
-            maxLat = Math.max(point.latitude, Integer.MAX_VALUE);
-            minLat = Math.min(point.latitude, Integer.MAX_VALUE);
-            maxLon = Math.max(point.longitude, Integer.MAX_VALUE);
-            minLon = Math.min(point.longitude, Integer.MAX_VALUE);
-        }
-        LatLngBounds latLngBounds = new LatLngBounds.Builder().include(new LatLng(maxLat, maxLon)).include(new LatLng(minLat, minLon)).build();
-        googleMap.animateCamera(CameraUpdateFactory.newLatLngBounds(latLngBounds, 50));
+    public static void moveCameraBetweenPoints(GoogleMap googleMap, LatLng point1, LatLng point2, int zoom) {
+        googleMap.animateCamera(CameraUpdateFactory.newLatLngBounds(new LatLngBounds.Builder().include(point1).include(point2).build(), zoom));
     }
 
 }
