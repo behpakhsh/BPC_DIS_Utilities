@@ -1,4 +1,4 @@
-package bpc.dis.utilities;
+package bpc.dis.utilities.ApplicationHelper;
 
 import android.app.ActivityManager;
 import android.content.Context;
@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ApplicationHelper {
 
-    public static boolean isAppllicationRunning(Context context, String packageName) {
+    public static boolean isApplicationRunning(Context context, String packageName) {
         ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
         if (activityManager != null) {
             List<ActivityManager.RunningAppProcessInfo> runningAppProcesses = activityManager.getRunningAppProcesses();
