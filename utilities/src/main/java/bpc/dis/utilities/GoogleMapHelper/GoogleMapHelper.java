@@ -52,4 +52,8 @@ public class GoogleMapHelper {
         googleMap.animateCamera(CameraUpdateFactory.newLatLngBounds(new LatLngBounds.Builder().include(point1).include(point2).build(), zoom));
     }
 
+    public static void animateCamera(GoogleMap googleMap, LatLng point, int zoom) {
+        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(point, zoom));
+    }
+
 }
