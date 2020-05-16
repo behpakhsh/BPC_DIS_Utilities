@@ -15,6 +15,13 @@ public class KeyboardHelper {
         getInputMethodManager(context).showSoftInput(target, InputMethodManager.SHOW_IMPLICIT);
     }
 
+    public static void showKeyboard(Activity activity, EditText target) {
+        if (activity == null || target == null) {
+            return;
+        }
+        getInputMethodManager(activity).showSoftInput(target, InputMethodManager.SHOW_IMPLICIT);
+    }
+
     private static void hideKeyboard(Context context, View target) {
         if (context == null || target == null) {
             return;
