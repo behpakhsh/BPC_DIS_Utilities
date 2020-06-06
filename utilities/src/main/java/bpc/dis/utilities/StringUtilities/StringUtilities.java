@@ -110,7 +110,8 @@ public class StringUtilities {
 
     public static double getCurrencyDouble(String numberString) {
         numberString = convertPersianNumberToEnglishNumber(numberString);
-        return Double.parseDouble(numberString.replaceAll(",", ""));
+        String s = numberString.replaceAll(",", "");
+        return Double.parseDouble(s);
     }
 
     public static String convertCurrencyToString(String formattedValue) {
