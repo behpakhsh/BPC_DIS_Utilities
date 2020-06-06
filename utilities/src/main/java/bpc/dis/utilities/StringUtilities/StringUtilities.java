@@ -100,14 +100,6 @@ public class StringUtilities {
         return new DecimalFormat("#,###").format(s);
     }
 
-    public static String getCurrencyFormatter(Object s) {
-        return new DecimalFormat("#,###").format(s);
-    }
-
-    public static String getCurrencyFormatter(String s) {
-        return new DecimalFormat("#,###").format(s);
-    }
-
     public static double getCurrencyDouble(String numberString) {
         numberString = convertPersianNumberToEnglishNumber(numberString);
         String s = numberString.replaceAll(",", "");
