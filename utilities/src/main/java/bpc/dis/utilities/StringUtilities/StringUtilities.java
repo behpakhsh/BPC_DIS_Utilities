@@ -109,6 +109,7 @@ public class StringUtilities {
     }
 
     public static double getCurrencyDouble(String numberString) {
+        numberString = convertPersianNumberToEnglishNumber(numberString);
         return Double.parseDouble(numberString.replaceAll(",", ""));
     }
 
