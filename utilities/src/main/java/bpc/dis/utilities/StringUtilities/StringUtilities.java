@@ -100,8 +100,16 @@ public class StringUtilities {
         return new DecimalFormat("#,###").format(s);
     }
 
+    public static String getCurrencyFormatter(Object s) {
+        return new DecimalFormat("#,###").format(s);
+    }
+
+    public static String getCurrencyFormatter(String s) {
+        return new DecimalFormat("#,###").format(s);
+    }
+
     public static double getCurrencyDouble(String numberString) {
-        return Double.valueOf(numberString.replaceAll(",", ""));
+        return Double.parseDouble(numberString.replaceAll(",", ""));
     }
 
     public static String convertCurrencyToString(String formattedValue) {
