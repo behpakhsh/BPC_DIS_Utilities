@@ -11,7 +11,7 @@ import java.io.File;
 
 public class IntentHelper {
 
-    public static void runApkForInstall(Activity activity, String applicationId, File file) {
+    public static void runApkForInstall(Activity activity, String applicationId, File file, int reqCode) {
         Uri fileUri = Uri.fromFile(file);
         if (Build.VERSION.SDK_INT >= 24) {
             if (file != null) {
@@ -23,7 +23,7 @@ public class IntentHelper {
         intent.setDataAndType(fileUri, "application/vnd.android.package-archive");
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        activity.startActivity(intent);
+        activity.startActivityForResult(intent, reqCode);
     }
 
 }
