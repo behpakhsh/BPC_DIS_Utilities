@@ -103,7 +103,7 @@ public class StringUtilities {
     public static double getCurrencyDouble(String numberString) {
         numberString = convertPersianNumberToEnglishNumber(numberString);
         String s = numberString.replaceAll(",", "");
-        s = numberString.replaceAll("٬", "");
+        s = s.replaceAll("٬", "");
         return Double.parseDouble(s);
     }
 
