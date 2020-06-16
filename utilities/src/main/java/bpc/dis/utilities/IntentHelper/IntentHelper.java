@@ -1,9 +1,12 @@
 package bpc.dis.utilities.IntentHelper;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
+import android.provider.Settings;
 
 import androidx.core.content.FileProvider;
 
@@ -24,6 +27,24 @@ public class IntentHelper {
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         activity.startActivityForResult(intent, reqCode);
+    }
+
+    public static void openDataUsageSetting(Activity activity) {
+        try {
+            Intent intent = new Intent(Intent.ACTION_MAIN, null);
+            intent.setComponent(new ComponentName("com.android.settings", "com.android.settings.Settings$DataUsageSummaryActivity"));
+            activity.startActivity(intent);
+        } catch (ActivityNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void openWifiSetting(Activity activity) {
+        try {
+            activity.startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
+        } catch (ActivityNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
 }
