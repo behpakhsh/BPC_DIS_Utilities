@@ -47,4 +47,14 @@ public class IntentHelper {
         }
     }
 
+    public static void openCaller(Activity activity, String number) {
+        try {
+            Intent intent = new Intent(Intent.ACTION_DIAL);
+            intent.setData(Uri.parse("tel:" + number));
+            activity.startActivity(intent);
+        } catch (ActivityNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
