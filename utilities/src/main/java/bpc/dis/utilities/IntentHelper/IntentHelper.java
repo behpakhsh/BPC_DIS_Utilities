@@ -29,6 +29,22 @@ public class IntentHelper {
         activity.startActivityForResult(intent, reqCode);
     }
 
+    public static void runApkForInstallSafe(Activity activity, String applicationId, File file, int reqCode) {
+        Uri fileUri = Uri.fromFile(file);
+        if (Build.VERSION.SDK_INT >= 24) {
+            if (file != null) {
+                fileUri = FileProvider.getUriForFile(activity, applicationId, file);
+            }
+        }
+        Intent intent = new Intent(Intent.ACTION_INSTALL_PACKAGE, fileUri);
+        intent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
+        intent.putExtra(Intent.EXTRA_NOT_UNKNOWN_SOURCE, true);
+        intent.setDataAndType(fileUri, "application/vnd.android.package-archive");
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        activity.startActivityForResult(intent, reqCode);
+    }
+
     public static void openDataUsageSetting(Activity activity) {
         try {
             Intent intent = new Intent(Intent.ACTION_MAIN, null);
