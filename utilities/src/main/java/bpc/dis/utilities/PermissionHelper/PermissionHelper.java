@@ -26,8 +26,18 @@ public class PermissionHelper {
         permissionResultListeners = new ArrayList<>();
     }
 
-    public void checkPermission(Activity activity, FragmentManager fragmentManager, Permission permission, PermissionType permissionType, PermissionResultListener permissionResultListener) {
-        requestPermission(activity, permission, getPermissionResultListener(activity, fragmentManager, permission, permissionType, permissionResultListener));
+    public void checkPermission(Activity activity, PermissionRequest permissionResult) {
+        requestPermission(
+                activity,
+                permissionResult.getPermission(),
+                getPermissionResultListener(
+                        activity,
+                        permissionResult.getFragmentManager(),
+                        permissionResult.getPermission(),
+                        permissionResult.getPermissionType(),
+                        permissionResult.getPermissionResultListener()
+                )
+        );
     }
 
     public void removeCallbacks() {
