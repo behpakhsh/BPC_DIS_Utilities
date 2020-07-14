@@ -66,10 +66,26 @@ public class PermissionHelper {
                     }
                 } else {
                     showAlertDialogDenied(activity, fragmentManager, permission, new PermissionResultListener() {
+
+                        @Override
+                        public void onPermissionGranted() {
+                            if (userPermissionResultListener != null) {
+                                userPermissionResultListener.onPermissionGranted();
+                            }
+                        }
+
                         @Override
                         public void onPermissionDenied() {
                             if (userPermissionResultListener != null) {
                                 userPermissionResultListener.onPermissionDenied();
+                            }
+                        }
+
+                        @Override
+                        public void onPermissionDeniedForEver() {
+                            super.onPermissionDeniedForEver();
+                            if (userPermissionResultListener != null) {
+                                userPermissionResultListener.onPermissionDeniedForEver();
                             }
                         }
                     });
@@ -140,7 +156,7 @@ public class PermissionHelper {
                 .setHeight(0.2)
                 .setWidth(0.7)
                 .setBackgroundRes(R.drawable.permission_helper_alert_background)
-                .setMessageTextSize(activity.getResources().getDimension(R.dimen.small))
+                .setMessageTextSize(activity.getResources().getDimension(R.dimen.medium))
                 .setMessageTextColor(activity.getResources().getColor(R.color.permission_helper_alert_text_color))
                 .setAlertButtons(getAlertButtonsDeniedForEver(activity, permissionResultListener))
                 .build();
