@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!--normal-->
+    <!--normal*0.9 = small-->
 
     <dimen name="verySmall">@dimen/_7sdp</dimen>
     <dimen name="small">@dimen/_10sdp</dimen>
