@@ -2,5 +2,6 @@
 <resources>
 
     <color name="permission_helper_alert_text_color">#000000</color>
+    <color name="permission_helper_alert_button_text_color">#009688</color>
 
 </resources>

@@ -122,10 +122,10 @@ public class PermissionHelper {
                 .setMessageText("for use application, you must allow this permission")
                 .setCancelable(false)
                 .setCloseEnable(false)
-                .setHeight(0.25)
+                .setHeight(0.2)
                 .setWidth(0.7)
                 .setBackgroundRes(R.drawable.permission_helper_alert_background)
-                .setMessageTextSize(activity.getResources().getDimension(R.dimen.small))
+                .setMessageTextSize(activity.getResources().getDimension(R.dimen.medium))
                 .setMessageTextColor(activity.getResources().getColor(R.color.permission_helper_alert_text_color))
                 .setAlertButtons(getAlertButtonsDenied(activity, permission, permissionResultListener))
                 .build();
@@ -137,7 +137,8 @@ public class PermissionHelper {
                 .setMessageText("please goto setting page and allowed permissions")
                 .setCancelable(false)
                 .setCloseEnable(false)
-                .setHeight(0.3)
+                .setHeight(0.2)
+                .setWidth(0.7)
                 .setBackgroundRes(R.drawable.permission_helper_alert_background)
                 .setMessageTextSize(activity.getResources().getDimension(R.dimen.small))
                 .setMessageTextColor(activity.getResources().getColor(R.color.permission_helper_alert_text_color))
@@ -152,7 +153,7 @@ public class PermissionHelper {
                 new AlertButton.Builder()
                         .setButtonBackgroundRes(R.drawable.permission_helper_alert_button_background)
                         .setButtonText("ask again")
-                        .setButtonTextColor(activity.getResources().getColor(R.color.permission_helper_alert_text_color))
+                        .setButtonTextColor(activity.getResources().getColor(R.color.permission_helper_alert_button_text_color))
                         .setButtonTextSize(activity.getResources().getDimension(R.dimen.small))
                         .setAlertClickListener(tag ->
                                 requestPermission(activity, permission, permissionResultListener)
@@ -163,7 +164,7 @@ public class PermissionHelper {
                 new AlertButton.Builder()
                         .setButtonBackgroundRes(R.drawable.permission_helper_alert_button_background)
                         .setButtonText("exit")
-                        .setButtonTextColor(activity.getResources().getColor(R.color.permission_helper_alert_text_color))
+                        .setButtonTextColor(activity.getResources().getColor(R.color.permission_helper_alert_button_text_color))
                         .setButtonTextSize(activity.getResources().getDimension(R.dimen.small))
                         .setAlertClickListener(tag -> {
                             if (permissionResultListener != null) {
@@ -181,7 +182,7 @@ public class PermissionHelper {
                 new AlertButton.Builder()
                         .setButtonBackgroundRes(R.drawable.permission_helper_alert_button_background)
                         .setButtonText("Setting")
-                        .setButtonTextColor(activity.getResources().getColor(R.color.permission_helper_alert_text_color))
+                        .setButtonTextColor(activity.getResources().getColor(R.color.permission_helper_alert_button_text_color))
                         .setButtonTextSize(activity.getResources().getDimension(R.dimen.small))
                         .setAlertClickListener(tag ->
                                 IntentHelper.openAppPermissionSetting(activity)
@@ -192,7 +193,7 @@ public class PermissionHelper {
                 new AlertButton.Builder()
                         .setButtonBackgroundRes(R.drawable.permission_helper_alert_button_background)
                         .setButtonText("exit")
-                        .setButtonTextColor(activity.getResources().getColor(R.color.permission_helper_alert_text_color))
+                        .setButtonTextColor(activity.getResources().getColor(R.color.permission_helper_alert_button_text_color))
                         .setButtonTextSize(activity.getResources().getDimension(R.dimen.small))
                         .setAlertClickListener(tag -> {
                             if (permissionResultListener != null) {
