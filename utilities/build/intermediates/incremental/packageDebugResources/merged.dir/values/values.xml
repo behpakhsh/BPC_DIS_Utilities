@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">BPC_DIS_Utilities</string>
+    <string name="disCall">تماس</string>
+    <string name="disCancelAction">انصراف</string>
+    <string name="disExitAction">خروج</string>
+    <string name="disLocation">موقعیت مکانی</string>
+    <string name="disSms">پیامک</string>
+    <string name="disStorage">حافظه داخلی</string>
+    <string name="disWhiteSpace"/>
 </resources>

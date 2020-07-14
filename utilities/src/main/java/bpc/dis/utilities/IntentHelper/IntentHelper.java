@@ -63,6 +63,18 @@ public class IntentHelper {
         }
     }
 
+    public static void openAppPermissionSetting(Activity activity) {
+        try {
+            Intent intent = new Intent();
+            intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+            Uri uri = Uri.fromParts("package", activity.getPackageName(), null);
+            intent.setData(uri);
+            activity.startActivity(intent);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void openCaller(Activity activity, String number) {
         try {
             Intent intent = new Intent(Intent.ACTION_DIAL);

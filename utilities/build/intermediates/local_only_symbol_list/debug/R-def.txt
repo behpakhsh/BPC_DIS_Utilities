@@ -1,0 +1,10 @@
+R_DEF: Internal format may change without notice
+local
+string app_name
+string disCall
+string disCancelAction
+string disExitAction
+string disLocation
+string disSms
+string disStorage
+string disWhiteSpace
