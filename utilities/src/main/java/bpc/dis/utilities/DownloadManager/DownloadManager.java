@@ -27,7 +27,7 @@ public class DownloadManager {
     public void download(Activity activity, FragmentManager fragmentManager, DownloadRequest downloadRequest) {
         new PermissionHelper().checkPermission(activity, PermissionRequest.Builder()
                 .setPermission(Permission.STORAGE)
-                .setPermissionType(PermissionType.NORMAL)
+                .setPermissionType(downloadRequest.getPermissionType())
                 .setFragmentManager(fragmentManager)
                 .setPermissionResultListener(new PermissionResultListener() {
                     @Override

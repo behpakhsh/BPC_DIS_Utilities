@@ -1,5 +1,7 @@
 package bpc.dis.utilities.DownloadManager;
 
+import bpc.dis.utilities.PermissionHelper.Enum.PermissionType;
+
 public class DownloadRequestBuilder {
 
     private boolean deleteFileAfterDownload = true;
@@ -9,6 +11,16 @@ public class DownloadRequestBuilder {
     private String downloadUrl = "";
     private String filename = "";
     private DownloadResponse downloadResponse;
+    private PermissionType permissionType = PermissionType.NO_ALERT;
+
+    public PermissionType getPermissionType() {
+        return permissionType;
+    }
+
+    public DownloadRequestBuilder setPermissionType(PermissionType permissionType) {
+        this.permissionType = permissionType;
+        return this;
+    }
 
     public boolean isDeleteFilePreDownload() {
         return deleteFilePreDownload;
@@ -76,6 +88,7 @@ public class DownloadRequestBuilder {
     public DownloadRequest build() {
         DownloadRequest downloadRequest = new DownloadRequest();
         downloadRequest.setTitle(getTitle());
+        downloadRequest.setPermissionType(getPermissionType());
         downloadRequest.setDeleteFilePreDownload(isDeleteFilePreDownload());
         downloadRequest.setDeleteFileAfterDownload(isDeleteFileAfterDownload());
         downloadRequest.setDescription(getDescription());
