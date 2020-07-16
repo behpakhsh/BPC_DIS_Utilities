@@ -15,6 +15,8 @@ public class PermissionTitle {
                 return R.string.disStorage;
             case CALL_PHONE:
                 return R.string.disCall;
+            case VOICE_RECORDER:
+                return R.string.voiceRecorder;
             default:
                 return R.string.disWhiteSpace;
         }

@@ -5,6 +5,7 @@
     <string name="disLocation">موقعیت مکانی</string>
     <string name="disWhiteSpace" />
     <string name="disCall">تماس</string>
+    <string name="voiceRecorder">ضبط صدا</string>
     <string name="disStorage">حافظه داخلی</string>
     <string name="disSms">پیامک</string>
 </resources>

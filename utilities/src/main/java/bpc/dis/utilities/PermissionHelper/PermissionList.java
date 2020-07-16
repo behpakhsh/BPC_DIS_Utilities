@@ -52,4 +52,10 @@ public class PermissionList {
         return strings;
     }
 
+    private ArrayList<String> geVoiceRecorderPermissionList() {
+        ArrayList<String> strings = new ArrayList<>();
+        strings.add(Manifest.permission.RECORD_AUDIO);
+        return strings;
+    }
+
 }
