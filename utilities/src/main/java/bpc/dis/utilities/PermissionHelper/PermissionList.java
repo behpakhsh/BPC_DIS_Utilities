@@ -19,6 +19,8 @@ public class PermissionList {
                 return geCallPhonePermissionList();
             case STORAGE:
                 return geStoragePermissionList();
+            case VOICE_RECORDER:
+                return geVoiceRecorderPermissionList();
         }
         return new ArrayList<>();
     }
