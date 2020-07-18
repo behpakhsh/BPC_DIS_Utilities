@@ -1,4 +1,4 @@
-package bpc.dis.utilities.Base64Helper;
+package bpc.dis.utilities.DecoderHelper;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
