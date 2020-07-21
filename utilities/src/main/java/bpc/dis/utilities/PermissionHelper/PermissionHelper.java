@@ -1,6 +1,7 @@
 package bpc.dis.utilities.PermissionHelper;
 
 import android.app.Activity;
+import android.content.Context;
 
 import androidx.fragment.app.FragmentManager;
 
@@ -42,6 +43,20 @@ public class PermissionHelper {
         );
     }
 
+    public void checkPermission(Context context, PermissionRequest permissionRequest) {
+        requestPermission(
+                context,
+                permissionRequest.getPermission(),
+                getPermissionResultListener(
+                        context,
+                        permissionRequest.getFragmentManager(),
+                        permissionRequest.getPermission(),
+                        permissionRequest.getPermissionType(),
+                        permissionRequest.getPermissionResultListener()
+                )
+        );
+    }
+
     public void removeCallbacks() {
         if (permissionResultListeners != null && !permissionResultListeners.isEmpty()) {
             for (int i = 0; i < permissionResultListeners.size(); i++) {
@@ -50,7 +65,7 @@ public class PermissionHelper {
         }
     }
 
-    private PermissionResultListener getPermissionResultListener(Activity activity, FragmentManager fragmentManager, Permission permission, PermissionType permissionType, PermissionResultListener userPermissionResultListener) {
+    private PermissionResultListener getPermissionResultListener(Context context, FragmentManager fragmentManager, Permission permission, PermissionType permissionType, PermissionResultListener userPermissionResultListener) {
         PermissionResultListener permissionResultListener = new PermissionResultListener() {
 
             @Override
@@ -67,9 +82,9 @@ public class PermissionHelper {
                         userPermissionResultListener.onPermissionDenied();
                     }
                 } else {
-                    showAlertDialogDenied(activity, fragmentManager, permissionType,
+                    showAlertDialogDenied(context, fragmentManager, permissionType,
                             tag ->
-                                    requestPermission(activity, permission, this),
+                                    requestPermission(context, permission, this),
                             tag -> {
                                 if (userPermissionResultListener != null) {
                                     userPermissionResultListener.onPermissionDenied();
@@ -86,8 +101,8 @@ public class PermissionHelper {
                         userPermissionResultListener.onPermissionDeniedForEver();
                     }
                 } else {
-                    showAlertDialogDeniedForEver(activity, fragmentManager, permissionType, tag ->
-                                    IntentHelper.openAppPermissionSetting(activity)
+                    showAlertDialogDeniedForEver(context, fragmentManager, permissionType, tag ->
+                                    IntentHelper.openAppPermissionSetting(context)
                             , tag -> {
                                 if (userPermissionResultListener != null) {
                                     userPermissionResultListener.onPermissionDeniedForEver();
@@ -102,8 +117,8 @@ public class PermissionHelper {
         return permissionResultListener;
     }
 
-    private void requestPermission(Activity activity, Permission permission, PermissionResultListener permissionResultListener) {
-        EzPermission.Companion.with(activity)
+    private void requestPermission(Context context, Permission permission, PermissionResultListener permissionResultListener) {
+        EzPermission.Companion.with(context)
                 .permissions(new PermissionList().getPermissionList(permission))
                 .request((granted, denied, permanentlyDenied) -> {
                     checkPermissionResult(granted, denied, permanentlyDenied, permissionResultListener);
@@ -127,23 +142,23 @@ public class PermissionHelper {
         }
     }
 
-    private void showAlertDialogDenied(Activity activity, FragmentManager fragmentManager, PermissionType permissionType, AlertClickListener alertClickListener1, AlertClickListener alertClickListener2) {
+    private void showAlertDialogDenied(Context context, FragmentManager fragmentManager, PermissionType permissionType, AlertClickListener alertClickListener1, AlertClickListener alertClickListener2) {
         AlertDialog alertDialog = new AlertDialog.Builder()
-                .setMessageText("for use application, you must allow this permission")
+                .setMessageText("For use application, you must allow this permission")
                 .setCancelable(false)
                 .setCloseEnable(false)
                 .setHeight(0.2)
                 .setWidth(0.7)
                 .setAlertType(AlertType.PERMISSION_ALERT)
                 .setBackgroundRes(R.drawable.permission_helper_alert_background)
-                .setMessageTextSize(activity.getResources().getDimension(R.dimen.medium))
-                .setMessageTextColor(activity.getResources().getColor(R.color.permission_helper_alert_text_color))
-                .setAlertButtons(getAlertButtonsDenied(activity, permissionType, alertClickListener1, alertClickListener2))
+                .setMessageTextSize(context.getResources().getDimension(R.dimen.medium))
+                .setMessageTextColor(context.getResources().getColor(R.color.permission_helper_alert_text_color))
+                .setAlertButtons(getAlertButtonsDenied(context, permissionType, alertClickListener1, alertClickListener2))
                 .build();
         alertDialog.show(fragmentManager);
     }
 
-    private void showAlertDialogDeniedForEver(Activity activity, FragmentManager fragmentManager, PermissionType permissionType, AlertClickListener alertClickListener1, AlertClickListener alertClickListener2) {
+    private void showAlertDialogDeniedForEver(Context context, FragmentManager fragmentManager, PermissionType permissionType, AlertClickListener alertClickListener1, AlertClickListener alertClickListener2) {
         AlertDialog alertDialog = new AlertDialog.Builder()
                 .setMessageText("please goto setting page and allowed permissions")
                 .setCancelable(false)
@@ -152,21 +167,21 @@ public class PermissionHelper {
                 .setWidth(0.7)
                 .setAlertType(AlertType.PERMISSION_ALERT)
                 .setBackgroundRes(R.drawable.permission_helper_alert_background)
-                .setMessageTextSize(activity.getResources().getDimension(R.dimen.medium))
-                .setMessageTextColor(activity.getResources().getColor(R.color.permission_helper_alert_text_color))
-                .setAlertButtons(getAlertButtonsDeniedForEver(activity, permissionType, alertClickListener1, alertClickListener2))
+                .setMessageTextSize(context.getResources().getDimension(R.dimen.medium))
+                .setMessageTextColor(context.getResources().getColor(R.color.permission_helper_alert_text_color))
+                .setAlertButtons(getAlertButtonsDeniedForEver(context, permissionType, alertClickListener1, alertClickListener2))
                 .build();
         alertDialog.show(fragmentManager);
     }
 
-    private List<AlertButton> getAlertButtonsDenied(Activity activity, PermissionType permissionType, AlertClickListener alertClickListener1, AlertClickListener alertClickListener2) {
+    private List<AlertButton> getAlertButtonsDenied(Context context, PermissionType permissionType, AlertClickListener alertClickListener1, AlertClickListener alertClickListener2) {
         List<AlertButton> alertButtons = new ArrayList<>();
         alertButtons.add(
                 new AlertButton.Builder()
                         .setButtonBackgroundRes(R.drawable.permission_helper_alert_button_background)
                         .setButtonText("ask again")
-                        .setButtonTextColor(activity.getResources().getColor(R.color.permission_helper_alert_button_text_color))
-                        .setButtonTextSize(activity.getResources().getDimension(R.dimen.small))
+                        .setButtonTextColor(context.getResources().getColor(R.color.permission_helper_alert_button_text_color))
+                        .setButtonTextSize(context.getResources().getDimension(R.dimen.small))
                         .setAlertClickListener(alertClickListener1)
                         .build()
         );
@@ -180,22 +195,22 @@ public class PermissionHelper {
                 new AlertButton.Builder()
                         .setButtonBackgroundRes(R.drawable.permission_helper_alert_button_background)
                         .setButtonText(buttonText)
-                        .setButtonTextColor(activity.getResources().getColor(R.color.permission_helper_alert_button_text_color))
-                        .setButtonTextSize(activity.getResources().getDimension(R.dimen.small))
+                        .setButtonTextColor(context.getResources().getColor(R.color.permission_helper_alert_button_text_color))
+                        .setButtonTextSize(context.getResources().getDimension(R.dimen.small))
                         .setAlertClickListener(alertClickListener2)
                         .build()
         );
         return alertButtons;
     }
 
-    private List<AlertButton> getAlertButtonsDeniedForEver(Activity activity, PermissionType permissionType, AlertClickListener alertClickListener1, AlertClickListener alertClickListener2) {
+    private List<AlertButton> getAlertButtonsDeniedForEver(Context context, PermissionType permissionType, AlertClickListener alertClickListener1, AlertClickListener alertClickListener2) {
         List<AlertButton> alertButtons = new ArrayList<>();
         alertButtons.add(
                 new AlertButton.Builder()
                         .setButtonBackgroundRes(R.drawable.permission_helper_alert_button_background)
                         .setButtonText("Setting")
-                        .setButtonTextColor(activity.getResources().getColor(R.color.permission_helper_alert_button_text_color))
-                        .setButtonTextSize(activity.getResources().getDimension(R.dimen.small))
+                        .setButtonTextColor(context.getResources().getColor(R.color.permission_helper_alert_button_text_color))
+                        .setButtonTextSize(context.getResources().getDimension(R.dimen.small))
                         .setAlertClickListener(alertClickListener1)
                         .build()
         );
@@ -209,8 +224,8 @@ public class PermissionHelper {
                 new AlertButton.Builder()
                         .setButtonBackgroundRes(R.drawable.permission_helper_alert_button_background)
                         .setButtonText(buttonText)
-                        .setButtonTextColor(activity.getResources().getColor(R.color.permission_helper_alert_button_text_color))
-                        .setButtonTextSize(activity.getResources().getDimension(R.dimen.small))
+                        .setButtonTextColor(context.getResources().getColor(R.color.permission_helper_alert_button_text_color))
+                        .setButtonTextSize(context.getResources().getDimension(R.dimen.small))
                         .setAlertClickListener(alertClickListener2)
                         .build()
         );

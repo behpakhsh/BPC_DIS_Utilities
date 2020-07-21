@@ -3,6 +3,7 @@ package bpc.dis.utilities.IntentHelper;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
@@ -70,6 +71,18 @@ public class IntentHelper {
             Uri uri = Uri.fromParts("package", activity.getPackageName(), null);
             intent.setData(uri);
             activity.startActivity(intent);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void openAppPermissionSetting(Context context) {
+        try {
+            Intent intent = new Intent();
+            intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+            Uri uri = Uri.fromParts("package", context.getPackageName(), null);
+            intent.setData(uri);
+            context.startActivity(intent);
         } catch (Exception e) {
             e.printStackTrace();
         }
