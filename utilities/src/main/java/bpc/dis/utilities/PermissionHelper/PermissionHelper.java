@@ -170,8 +170,10 @@ public class PermissionHelper {
                         .setAlertClickListener(alertClickListener1)
                         .build()
         );
-        String buttonText = "exit";
-        if (permissionType == PermissionType.NORMAL) {
+        String buttonText;
+        if (permissionType == PermissionType.FORCE_ALERT) {
+            buttonText = "exit";
+        } else {
             buttonText = "cancel";
         }
         alertButtons.add(
@@ -197,8 +199,10 @@ public class PermissionHelper {
                         .setAlertClickListener(alertClickListener1)
                         .build()
         );
-        String buttonText = "exit";
-        if (permissionType == PermissionType.NORMAL) {
+        String buttonText;
+        if (permissionType == PermissionType.FORCE_ALERT) {
+            buttonText = "exit";
+        } else {
             buttonText = "cancel";
         }
         alertButtons.add(

@@ -2,8 +2,6 @@ package bpc.dis.utilities.PermissionHelper.Enum;
 
 public enum PermissionType {
 
-    NORMAL,
-    NO_ALERT,
-    FORCE;
+    NORMAL_ALERT, NO_ALERT, FORCE_ALERT
 
 }
