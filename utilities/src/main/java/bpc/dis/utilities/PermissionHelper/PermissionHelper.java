@@ -126,6 +126,15 @@ public class PermissionHelper {
                 });
     }
 
+    private void requestPermission(Activity activity, Permission permission, PermissionResultListener permissionResultListener) {
+        EzPermission.Companion.with(activity)
+                .permissions(new PermissionList().getPermissionList(permission))
+                .request((granted, denied, permanentlyDenied) -> {
+                    checkPermissionResult(granted, denied, permanentlyDenied, permissionResultListener);
+                    return null;
+                });
+    }
+
     private void checkPermissionResult(Set<String> granted, Set<String> denied, Set<String> permanentlyDenied, PermissionResultListener permissionResultListener) {
         if (granted != null && !granted.isEmpty()) {
             if (permissionResultListener != null) {
