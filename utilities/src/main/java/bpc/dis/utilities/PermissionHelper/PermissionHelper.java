@@ -13,6 +13,7 @@ import java.util.Set;
 import bpc.dis.alertdialog.AlertButton;
 import bpc.dis.alertdialog.AlertClickListener;
 import bpc.dis.alertdialog.AlertDialog;
+import bpc.dis.alertdialog.AlertType;
 import bpc.dis.utilities.IntentHelper.IntentHelper;
 import bpc.dis.utilities.PermissionHelper.Enum.Permission;
 import bpc.dis.utilities.PermissionHelper.Enum.PermissionType;
@@ -146,6 +147,7 @@ public class PermissionHelper {
                 .setCloseEnable(false)
                 .setHeight(0.2)
                 .setWidth(0.7)
+                .setAlertType(AlertType.PERMISSION_ALERT)
                 .setBackgroundRes(R.drawable.permission_helper_alert_background)
                 .setMessageTextSize(activity.getResources().getDimension(R.dimen.medium))
                 .setMessageTextColor(activity.getResources().getColor(R.color.permission_helper_alert_text_color))
