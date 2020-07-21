@@ -67,13 +67,15 @@ public class PermissionHelper {
                         userPermissionResultListener.onPermissionDenied();
                     }
                 } else {
-                    showAlertDialogDenied(activity, fragmentManager, permissionType, tag -> {
-                        requestPermission(activity, permission, this);
-                    }, tag -> {
-                        if (userPermissionResultListener != null) {
-                            userPermissionResultListener.onPermissionDenied();
-                        }
-                    });
+                    showAlertDialogDenied(activity, fragmentManager, permissionType,
+                            tag ->
+                                    requestPermission(activity, permission, this),
+                            tag -> {
+                                if (userPermissionResultListener != null) {
+                                    userPermissionResultListener.onPermissionDenied();
+                                }
+                            }
+                    );
                 }
             }
 

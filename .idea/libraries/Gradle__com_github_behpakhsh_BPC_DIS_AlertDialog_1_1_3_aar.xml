@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.behpakhsh:BPC_DIS_AlertDialog:1.1.3@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e742a89abb08db34ac6e17848ee85fdf/jetified-BPC_DIS_AlertDialog-1.1.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e742a89abb08db34ac6e17848ee85fdf/jetified-BPC_DIS_AlertDialog-1.1.3/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.behpakhsh/BPC_DIS_AlertDialog/1.1.3/49420dddd27ca04b57f542c6f8e9e5c2ea312ac/BPC_DIS_AlertDialog-1.1.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
