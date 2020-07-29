@@ -6,32 +6,44 @@ import java.net.InetAddress;
 import java.util.Date;
 
 import bpc.dis.utilities.Listener.ObjectTaskResult;
-import io.reactivex.Completable;
+import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
 public class TimeLookup {
 
     public static void getRealOnlineDate(ObjectTaskResult<Date> dateObjectTaskResult) {
-        CompositeDisposable disposable = new CompositeDisposable();
-        disposable.add(
-                Completable.fromAction(() -> {
-                            Date date =
-                                    new Date(new NTPUDPClient().getTime(InetAddress.getByName("time-a.nist.gov")).getReturnTime());
-                            dateObjectTaskResult.onResult(date);
-                        }
+        io.reactivex.Observable.fromCallable(() -> {
+            Date date =
+                    new Date(new NTPUDPClient().getTime(InetAddress.getByName("time-a.nist.gov")).getReturnTime());
+            return date;
+        })
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(new Observer<Date>() {
 
-                )
-                        .subscribeOn(Schedulers.io())
-                        .observeOn(AndroidSchedulers.mainThread())
-                        .doFinally(() -> {
-                            if (!disposable.isDisposed()) {
-                                disposable.dispose();
-                            }
-                        })
-                        .subscribe()
-        );
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(Date date) {
+                        dateObjectTaskResult.onResult(date);
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+
+                });
     }
 
 }
