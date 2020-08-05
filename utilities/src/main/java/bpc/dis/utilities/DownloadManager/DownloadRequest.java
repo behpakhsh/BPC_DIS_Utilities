@@ -1,5 +1,7 @@
 package bpc.dis.utilities.DownloadManager;
 
+import java.util.List;
+
 public class DownloadRequest {
 
     private long id;
@@ -10,9 +12,14 @@ public class DownloadRequest {
     private String downloadUrl;
     private String filename;
     private DownloadResponse downloadResponse;
+    private List<DownloadRequestHeader> headerParams;
 
-    public static DownloadRequestBuilder Builder() {
-        return new DownloadRequestBuilder();
+    public List<DownloadRequestHeader> getHeaderParams() {
+        return headerParams;
+    }
+
+    public void setHeaderParams(List<DownloadRequestHeader> headerParams) {
+        this.headerParams = headerParams;
     }
 
     public boolean isDeleteFilePreDownload() {
