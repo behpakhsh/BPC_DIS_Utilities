@@ -1,4 +1,0 @@
-#Wed Jul 29 15:08:54 IRDT 2020
-base.0=F\:\\Project\\Behpaksh\\JitPackLibrary\\BPC_DIS_Utilities\\BPC_DIS_Utilities\\app\\build\\intermediates\\dex\\debug\\out\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
