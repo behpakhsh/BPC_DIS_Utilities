@@ -77,7 +77,6 @@ public class DownloadRequestBuilder {
     public DownloadRequest build() {
         DownloadRequest downloadRequest = new DownloadRequest();
         downloadRequest.setTitle(getTitle());
-        downloadRequest.setPermissionType(getPermissionType());
         downloadRequest.setDeleteFilePreDownload(isDeleteFilePreDownload());
         downloadRequest.setDeleteFileAfterDownload(isDeleteFileAfterDownload());
         downloadRequest.setDescription(getDescription());
