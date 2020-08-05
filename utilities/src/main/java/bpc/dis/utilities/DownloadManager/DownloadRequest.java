@@ -14,6 +14,10 @@ public class DownloadRequest {
     private DownloadResponse downloadResponse;
     private List<DownloadRequestHeader> headerParams;
 
+    public static DownloadRequestBuilder builder() {
+        return new DownloadRequestBuilder();
+    }
+
     public List<DownloadRequestHeader> getHeaderParams() {
         return headerParams;
     }
