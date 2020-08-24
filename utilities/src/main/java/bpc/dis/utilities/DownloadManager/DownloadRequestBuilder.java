@@ -4,7 +4,7 @@ import java.util.List;
 
 public class DownloadRequestBuilder {
 
-    private boolean deleteFileAfterDownload = true;
+    private boolean deleteFileAfterDownload = false;
     private boolean deleteFilePreDownload = true;
     private String title = "";
     private String description = "";

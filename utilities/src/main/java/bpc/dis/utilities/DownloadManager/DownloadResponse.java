@@ -4,6 +4,10 @@ import java.io.File;
 
 public abstract class DownloadResponse {
 
+    public void onDownloadPreStarted() {
+
+    }
+
     public void onDownloadStarted(long id) {
 
     }
