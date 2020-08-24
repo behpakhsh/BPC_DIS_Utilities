@@ -12,6 +12,7 @@ import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 public class DownloadManager {
 
@@ -22,6 +23,7 @@ public class DownloadManager {
             DownloadResponse downloadResponse = getDownloadResponse(downloadRequest);
             downloadResponse.onDownloadPreStarted();
             android.app.DownloadManager.Request request = getDownloadManger(
+                    downloadRequest.getHeaderParams(),
                     downloadRequest.getDownloadUrl(),
                     downloadRequest.getFilename(),
                     downloadRequest.getTitle(),
@@ -117,7 +119,7 @@ public class DownloadManager {
         };
     }
 
-    private android.app.DownloadManager.Request getDownloadManger(String url, String filename, String title, String description) {
+    private android.app.DownloadManager.Request getDownloadManger(List<DownloadRequestHeader> downloadRequestHeaders, String url, String filename, String title, String description) {
         android.app.DownloadManager.Request request = new android.app.DownloadManager.Request(Uri.parse(url));
         request.setAllowedNetworkTypes(android.app.DownloadManager.Request.NETWORK_MOBILE | android.app.DownloadManager.Request.NETWORK_WIFI);
         request.setMimeType(getMimeFromFileName(url));
@@ -129,6 +131,16 @@ public class DownloadManager {
         request.setAllowedOverRoaming(true);
         request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, filename);
         request.setNotificationVisibility(android.app.DownloadManager.Request.VISIBILITY_VISIBLE);
+
+        if (downloadRequestHeaders != null) {
+            for (DownloadRequestHeader downloadRequestHeader : downloadRequestHeaders) {
+                request.addRequestHeader(
+                        downloadRequestHeader.getKey(),
+                        downloadRequestHeader.getValue()
+                );
+            }
+        }
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             request.setRequiresCharging(false);
         }
