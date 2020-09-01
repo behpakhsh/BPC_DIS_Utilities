@@ -49,7 +49,7 @@ public class DownloadManager {
                 String path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath() + "/" + downloadRequest.getFilename();
                 File file = new File(path);
                 if (file.exists()) {
-                    if (file.getName().equals(downloadRequest.getFilename())) {
+                    if (file.getName().toLowerCase().equals(downloadRequest.getFilename().toLowerCase())) {
                         if (downloadRequest.isDeleteFilePreDownload()) {
                             try {
                                 FileUtils.forceDelete(file);
@@ -98,7 +98,7 @@ public class DownloadManager {
                     String path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath() + "/" + downloadRequest.getFilename();
                     File file = new File(path);
                     if (file.exists()) {
-                        if (file.getName().equals(downloadRequest.getFilename())) {
+                        if (file.getName().toLowerCase().equals(downloadRequest.getFilename().toLowerCase())) {
                             downloadRequest.getDownloadResponse().onDownloadFinish(file);
                             if (downloadRequest.isDeleteFileAfterDownload()) {
                                 FileUtils.forceDelete(file);
