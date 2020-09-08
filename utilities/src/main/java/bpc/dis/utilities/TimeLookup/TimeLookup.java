@@ -1,5 +1,7 @@
 package bpc.dis.utilities.TimeLookup;
 
+import android.annotation.SuppressLint;
+
 import org.apache.commons.net.ntp.NTPUDPClient;
 
 import java.net.InetAddress;
@@ -13,6 +15,7 @@ import io.reactivex.schedulers.Schedulers;
 
 public class TimeLookup {
 
+    @SuppressLint("CheckResult")
     public static void getRealOnlineDate(ObjectTaskResult<Date> dateObjectTaskResult) {
         io.reactivex.Observable.fromCallable(() -> {
             Date date =
@@ -35,7 +38,7 @@ public class TimeLookup {
 
                     @Override
                     public void onError(Throwable e) {
-
+                        dateObjectTaskResult.onResult(null);
                     }
 
                     @Override
