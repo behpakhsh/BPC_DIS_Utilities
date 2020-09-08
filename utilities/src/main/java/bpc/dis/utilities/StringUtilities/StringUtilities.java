@@ -101,14 +101,15 @@ public class StringUtilities {
     }
 
     public static double getCurrencyDouble(String numberString) {
-        numberString = convertPersianNumberToEnglishNumber(numberString);
-        String s = numberString.replaceAll(",", "");
-        s = s.replaceAll("٬", "");
-        return Double.parseDouble(s);
+        numberString = numberString.replaceAll(",", "");
+        numberString = numberString.replaceAll("٬", "");
+        return Double.parseDouble(numberString);
     }
 
     public static String convertCurrencyToString(String formattedValue) {
-        return formattedValue.replace(",", "");
+        formattedValue = formattedValue.replace(",", "");
+        formattedValue = formattedValue.replace("٬", "");
+        return formattedValue;
     }
 
     /**
@@ -116,7 +117,10 @@ public class StringUtilities {
      */
     @Deprecated
     public static boolean isValidPhoneNumber(String phone) {
-        return !StringUtilities.isNullOrEmpty(phone) && !StringUtilities.isNotNumber(phone) && phone.length() == 11 && phone.startsWith("09");
+        return !StringUtilities.isNullOrEmpty(phone) &&
+                !StringUtilities.isNotNumber(phone) &&
+                phone.length() == 11 &&
+                phone.startsWith("09");
     }
 
 }
