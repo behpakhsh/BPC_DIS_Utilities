@@ -22,10 +22,12 @@ public class StringUtilities {
     }
 
     public static boolean isNotNumber(String input) {
+        input = convertPersianNumberToEnglishNumber(input);
         return input.replaceAll("[0-9]", "").length() != 0;
     }
 
     public static boolean isCharacter(String input) {
+        input = convertPersianNumberToEnglishNumber(input);
         return input.replaceAll("[0-9]", "").length() == input.length();
     }
 
@@ -101,12 +103,14 @@ public class StringUtilities {
     }
 
     public static double getCurrencyDouble(String numberString) {
+        numberString = convertPersianNumberToEnglishNumber(numberString);
         numberString = numberString.replaceAll(",", "");
         numberString = numberString.replaceAll("٬", "");
         return Double.parseDouble(numberString);
     }
 
     public static String convertCurrencyToString(String formattedValue) {
+        formattedValue = convertPersianNumberToEnglishNumber(formattedValue);
         formattedValue = formattedValue.replace(",", "");
         formattedValue = formattedValue.replace("٬", "");
         return formattedValue;
