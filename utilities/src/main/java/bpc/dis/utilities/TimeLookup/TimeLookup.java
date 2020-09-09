@@ -3,6 +3,8 @@ package bpc.dis.utilities.TimeLookup;
 import android.annotation.SuppressLint;
 
 import org.apache.commons.net.ntp.NTPUDPClient;
+import org.apache.commons.net.ntp.NtpV3Packet;
+import org.apache.commons.net.ntp.TimeInfo;
 
 import java.net.InetAddress;
 import java.util.Date;
@@ -18,8 +20,14 @@ public class TimeLookup {
     @SuppressLint("CheckResult")
     public static void getRealOnlineDate(ObjectTaskResult<Date> dateObjectTaskResult) {
         io.reactivex.Observable.fromCallable(() -> {
-            Date date =
-                    new Date(new NTPUDPClient().getTime(InetAddress.getByName("time-a.nist.gov")).getReturnTime());
+            Date date = new Date();
+            InetAddress byName = InetAddress.getByName("time-a.nist.gov");
+            if (byName != null) {
+                NtpV3Packet message = new NTPUDPClient().getTime(byName).getMessage();
+                if (message != null) {
+                    return new Date(message.getTransmitTimeStamp().getTime());
+                }
+            }
             return date;
         })
                 .subscribeOn(Schedulers.io())
