@@ -39,6 +39,11 @@ public class SharedPreferencesManager {
         return sharedPreferences.getBoolean(key, defaultValue);
     }
 
+    public double get(Context context, String key, double defaultValue) {
+        SharedPreferences sharedPreferences = getSharedPreferences(context);
+        return sharedPreferences.getFloat(key, (float) defaultValue);
+    }
+
     public void set(Context context, String key, boolean value) {
         SharedPreferences.Editor editor = getSharedPreferences(context).edit();
         editor.putBoolean(key, value);
@@ -48,6 +53,12 @@ public class SharedPreferencesManager {
     public void set(Context context, String key, int value) {
         SharedPreferences.Editor editor = getSharedPreferences(context).edit();
         editor.putInt(key, value);
+        editor.apply();
+    }
+
+    public void set(Context context, String key, double value) {
+        SharedPreferences.Editor editor = getSharedPreferences(context).edit();
+        editor.putFloat(key, (float) value);
         editor.apply();
     }
 
