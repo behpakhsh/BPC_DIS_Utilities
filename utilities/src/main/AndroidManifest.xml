@@ -1,6 +1,3 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="bpc.dis.utilities">
-
-    <uses-permission android:name="android.permission.CALL_PHONE" />
+<manifest package="bpc.dis.utilities">
 
 </manifest>
