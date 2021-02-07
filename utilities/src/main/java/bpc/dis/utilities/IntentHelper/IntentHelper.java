@@ -98,4 +98,13 @@ public class IntentHelper {
         }
     }
 
+    public static void openUrl(Activity activity, String url) {
+        try {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            activity.startActivity(browserIntent);
+        } catch (ActivityNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
