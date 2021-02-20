@@ -11,6 +11,7 @@
     <string name="disCancelAction">انصراف</string>
     <string name="disExitAction">خروج</string>
     <string name="disLocation">موقعیت مکانی</string>
+    <string name="disSendSms">ارسال پیامک</string>
     <string name="disSms">پیامک</string>
     <string name="disStorage">حافظه داخلی</string>
     <string name="disWhiteSpace"/>

@@ -2265,6 +2265,7 @@ string disCall
 string disCancelAction
 string disExitAction
 string disLocation
+string disSendSms
 string disSms
 string disStorage
 string disWhiteSpace

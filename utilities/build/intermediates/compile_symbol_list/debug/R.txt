@@ -2264,6 +2264,7 @@ int string disCall 0x0
 int string disCancelAction 0x0
 int string disExitAction 0x0
 int string disLocation 0x0
+int string disSendSms 0x0
 int string disSms 0x0
 int string disStorage 0x0
 int string disWhiteSpace 0x0
