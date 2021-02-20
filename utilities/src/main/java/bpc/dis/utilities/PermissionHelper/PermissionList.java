@@ -15,6 +15,8 @@ public class PermissionList {
                 return getLocationPermissionList();
             case SMS:
                 return geSmsPermissionList();
+            case SEND_SMS:
+                return geSendSmsPermissionList();
             case CALL_PHONE:
                 return geCallPhonePermissionList();
             case STORAGE:
@@ -36,6 +38,12 @@ public class PermissionList {
         ArrayList<String> strings = new ArrayList<>();
         strings.add(Manifest.permission.READ_SMS);
         strings.add(Manifest.permission.RECEIVE_SMS);
+        return strings;
+    }
+
+    private ArrayList<String> geSendSmsPermissionList() {
+        ArrayList<String> strings = new ArrayList<>();
+        strings.add(Manifest.permission.SEND_SMS);
         return strings;
     }
 

@@ -8,4 +8,5 @@
     <string name="voiceRecorder">ضبط صدا</string>
     <string name="disStorage">حافظه داخلی</string>
     <string name="disSms">پیامک</string>
+    <string name="disSendSms">ارسال پیامک</string>
 </resources>

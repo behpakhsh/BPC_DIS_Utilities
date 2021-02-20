@@ -11,6 +11,8 @@ public class PermissionTitle {
                 return R.string.disLocation;
             case SMS:
                 return R.string.disSms;
+            case SEND_SMS:
+                return R.string.disSendSms;
             case STORAGE:
                 return R.string.disStorage;
             case CALL_PHONE:
