@@ -37,6 +37,17 @@ public class GoogleMapHelper {
         googleMap.addPolyline(options);
     }
 
+    public static void setMark(Context context, GoogleMap googleMap, String title, int vectorRes, LatLng latLng) {
+        MarkerOptions markerOptions = new MarkerOptions();
+        markerOptions.position(latLng);
+        BitmapDescriptor bitmapDescriptor = VectorHelper.bitmapDescriptorFromVector(context, vectorRes);
+        if (bitmapDescriptor != null) {
+            markerOptions.icon(bitmapDescriptor);
+        }
+        markerOptions.title(title);
+        googleMap.addMarker(markerOptions).showInfoWindow();
+    }
+
     public static void setMark(Context context, GoogleMap googleMap, String title, int vectorRes, double lat, double lng) {
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(new LatLng(lat, lng));
@@ -50,6 +61,14 @@ public class GoogleMapHelper {
 
     public static void moveCameraBetweenPoints(GoogleMap googleMap, LatLng point1, LatLng point2, int zoom) {
         googleMap.animateCamera(CameraUpdateFactory.newLatLngBounds(new LatLngBounds.Builder().include(point1).include(point2).build(), zoom));
+    }
+
+    public static void moveCameraBetweenPoints(GoogleMap googleMap, LatLngBounds latLngBounds) {
+        googleMap.animateCamera(CameraUpdateFactory.newLatLngBounds(latLngBounds, 16));
+    }
+
+    public static void zoomCamera(GoogleMap googleMap, int zoom) {
+        googleMap.animateCamera(CameraUpdateFactory.zoomTo(zoom));
     }
 
     public static void animateCamera(GoogleMap googleMap, LatLng point, int zoom) {
