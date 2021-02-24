@@ -39,21 +39,77 @@ public class GoogleMapHelper {
     }
 
 
-    public static void addMarker(Context context, GoogleMap googleMap, String title, int vectorRes, LatLng latLng) {
-        MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(latLng);
-        BitmapDescriptor bitmapDescriptor = VectorHelper.bitmapDescriptorFromVector(context, vectorRes);
-        if (bitmapDescriptor != null) {
-            markerOptions.icon(bitmapDescriptor);
-        }
-        markerOptions.title(title);
-        googleMap.addMarker(markerOptions).showInfoWindow();
+    public static Marker addMarker(
+            Context context,
+            GoogleMap googleMap,
+            int vectorRes,
+            LatLng latLng
+    ) {
+        return addMarker(
+                context,
+                googleMap,
+                "",
+                vectorRes,
+                latLng
+        );
     }
 
-    public static Marker addMarker(Context context, GoogleMap googleMap, String title, String tag, int vectorRes, LatLng latLng) {
+
+    public static Marker addMarker(
+            Context context,
+            GoogleMap googleMap,
+            String title,
+            int vectorRes,
+            LatLng latLng
+    ) {
+        return addMarker(
+                context,
+                googleMap,
+                title,
+                "",
+                vectorRes,
+                latLng
+        );
+    }
+
+    public static Marker addMarker(
+            Context context,
+            GoogleMap googleMap,
+            String title,
+            String tag,
+            int vectorRes,
+            LatLng latLng
+    ) {
+        return addMarker(
+                context,
+                googleMap,
+                title,
+                "",
+                vectorRes,
+                latLng,
+                0,
+                0
+        );
+    }
+
+    public static Marker addMarker(
+            Context context,
+            GoogleMap googleMap,
+            String title,
+            String tag,
+            int vectorRes,
+            LatLng latLng,
+            int width,
+            int height
+    ) {
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(latLng);
-        BitmapDescriptor bitmapDescriptor = VectorHelper.bitmapDescriptorFromVector(context, vectorRes);
+        BitmapDescriptor bitmapDescriptor;
+        if (width == 0) {
+            bitmapDescriptor = VectorHelper.bitmapDescriptorFromVector(context, vectorRes);
+        } else {
+            bitmapDescriptor = VectorHelper.bitmapDescriptorFromVector(context, vectorRes, width, height);
+        }
         if (bitmapDescriptor != null) {
             markerOptions.icon(bitmapDescriptor);
         }
@@ -64,21 +120,14 @@ public class GoogleMapHelper {
         return marker;
     }
 
-    public static Marker addMarker(Context context, GoogleMap googleMap, String title, String tag, int vectorRes, LatLng latLng, int width, int height) {
-        MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(latLng);
-        BitmapDescriptor bitmapDescriptor = VectorHelper.bitmapDescriptorFromVector(context, vectorRes,width,height);
-        if (bitmapDescriptor != null) {
-            markerOptions.icon(bitmapDescriptor);
-        }
-        markerOptions.title(title);
-        Marker marker = googleMap.addMarker(markerOptions);
-        marker.setTag(tag);
-        marker.showInfoWindow();
-        return marker;
-    }
-
-    public static void addMarker(Context context, GoogleMap googleMap, String title, int vectorRes, double lat, double lng) {
+    public static Marker addMarker(
+            Context context,
+            GoogleMap googleMap,
+            String title,
+            int vectorRes,
+            double lat,
+            double lng
+    ) {
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(new LatLng(lat, lng));
         BitmapDescriptor bitmapDescriptor = VectorHelper.bitmapDescriptorFromVector(context, vectorRes);
@@ -86,7 +135,9 @@ public class GoogleMapHelper {
             markerOptions.icon(bitmapDescriptor);
         }
         markerOptions.title(title);
-        googleMap.addMarker(markerOptions).showInfoWindow();
+        Marker marker = googleMap.addMarker(markerOptions);
+        marker.showInfoWindow();
+        return marker;
     }
 
 
