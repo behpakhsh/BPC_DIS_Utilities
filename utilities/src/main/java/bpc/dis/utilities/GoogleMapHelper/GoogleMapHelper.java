@@ -8,6 +8,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 
@@ -37,7 +38,8 @@ public class GoogleMapHelper {
         googleMap.addPolyline(options);
     }
 
-    public static void setMark(Context context, GoogleMap googleMap, String title, int vectorRes, LatLng latLng) {
+
+    public static void addMarker(Context context, GoogleMap googleMap, String title, int vectorRes, LatLng latLng) {
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(latLng);
         BitmapDescriptor bitmapDescriptor = VectorHelper.bitmapDescriptorFromVector(context, vectorRes);
@@ -48,7 +50,35 @@ public class GoogleMapHelper {
         googleMap.addMarker(markerOptions).showInfoWindow();
     }
 
-    public static void setMark(Context context, GoogleMap googleMap, String title, int vectorRes, double lat, double lng) {
+    public static Marker addMarker(Context context, GoogleMap googleMap, String title, String tag, int vectorRes, LatLng latLng) {
+        MarkerOptions markerOptions = new MarkerOptions();
+        markerOptions.position(latLng);
+        BitmapDescriptor bitmapDescriptor = VectorHelper.bitmapDescriptorFromVector(context, vectorRes);
+        if (bitmapDescriptor != null) {
+            markerOptions.icon(bitmapDescriptor);
+        }
+        markerOptions.title(title);
+        Marker marker = googleMap.addMarker(markerOptions);
+        marker.setTag(tag);
+        marker.showInfoWindow();
+        return marker;
+    }
+
+    public static Marker addMarker(Context context, GoogleMap googleMap, String title, String tag, int vectorRes, LatLng latLng, int width, int height) {
+        MarkerOptions markerOptions = new MarkerOptions();
+        markerOptions.position(latLng);
+        BitmapDescriptor bitmapDescriptor = VectorHelper.bitmapDescriptorFromVector(context, vectorRes,width,height);
+        if (bitmapDescriptor != null) {
+            markerOptions.icon(bitmapDescriptor);
+        }
+        markerOptions.title(title);
+        Marker marker = googleMap.addMarker(markerOptions);
+        marker.setTag(tag);
+        marker.showInfoWindow();
+        return marker;
+    }
+
+    public static void addMarker(Context context, GoogleMap googleMap, String title, int vectorRes, double lat, double lng) {
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(new LatLng(lat, lng));
         BitmapDescriptor bitmapDescriptor = VectorHelper.bitmapDescriptorFromVector(context, vectorRes);
@@ -59,19 +89,21 @@ public class GoogleMapHelper {
         googleMap.addMarker(markerOptions).showInfoWindow();
     }
 
+
     public static void moveCameraBetweenPoints(GoogleMap googleMap, LatLng point1, LatLng point2, int zoom) {
         googleMap.animateCamera(CameraUpdateFactory.newLatLngBounds(new LatLngBounds.Builder().include(point1).include(point2).build(), zoom));
     }
 
     public static void moveCameraBetweenPoints(GoogleMap googleMap, LatLngBounds latLngBounds) {
-        googleMap.animateCamera(CameraUpdateFactory.newLatLngBounds(latLngBounds, 16));
+        googleMap.animateCamera(CameraUpdateFactory.newLatLngBounds(latLngBounds, 0));
     }
 
-    public static void zoomCamera(GoogleMap googleMap, int zoom) {
+
+    public static void zoomCamera(GoogleMap googleMap, float zoom) {
         googleMap.animateCamera(CameraUpdateFactory.zoomTo(zoom));
     }
 
-    public static void animateCamera(GoogleMap googleMap, LatLng point, int zoom) {
+    public static void moveCamera(GoogleMap googleMap, LatLng point, int zoom) {
         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(point, zoom));
     }
 
