@@ -84,7 +84,7 @@ public class GoogleMapHelper {
                 context,
                 googleMap,
                 title,
-                "",
+                tag,
                 vectorRes,
                 latLng,
                 0,
@@ -141,14 +141,33 @@ public class GoogleMapHelper {
     }
 
 
-    public static void moveCameraBetweenPoints(GoogleMap googleMap, LatLng point1, LatLng point2, int zoom) {
-        googleMap.animateCamera(CameraUpdateFactory.newLatLngBounds(new LatLngBounds.Builder().include(point1).include(point2).build(), zoom));
+    public static void moveCameraBetweenPoints(
+            GoogleMap googleMap,
+            LatLng point1,
+            LatLng point2, int padding
+    ) {
+        moveCameraBetweenPoints(
+                googleMap,
+                new LatLngBounds.Builder()
+                        .include(point1)
+                        .include(point2)
+                        .build(),
+                padding
+        );
     }
 
     public static void moveCameraBetweenPoints(GoogleMap googleMap, LatLngBounds latLngBounds) {
-        googleMap.animateCamera(CameraUpdateFactory.newLatLngBounds(latLngBounds, 0));
+        moveCameraBetweenPoints(
+                googleMap,
+                latLngBounds,
+                0
+        );
     }
 
+
+    public static void moveCameraBetweenPoints(GoogleMap googleMap, LatLngBounds latLngBounds, int padding) {
+        googleMap.animateCamera(CameraUpdateFactory.newLatLngBounds(latLngBounds, padding));
+    }
 
     public static void zoomCamera(GoogleMap googleMap, float zoom) {
         googleMap.animateCamera(CameraUpdateFactory.zoomTo(zoom));
