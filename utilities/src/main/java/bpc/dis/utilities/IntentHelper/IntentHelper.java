@@ -107,4 +107,32 @@ public class IntentHelper {
         }
     }
 
+    public static void sendMessage(Activity activity, String message) {
+        sendMessage(activity,
+                "لطفا پیام رسان خود را انتخاب کنید",
+                "",
+                message
+        );
+    }
+
+    public static void sendMessage(Activity activity, String title, String message) {
+        sendMessage(activity,
+                "لطفا پیام رسان خود را انتخاب کنید",
+                title,
+                message
+        );
+    }
+
+    public static void sendMessage(Activity activity, String choicerTitle, String title, String message) {
+        try {
+            Intent intent = new Intent(android.content.Intent.ACTION_SEND);
+            intent.setType("text/plain");
+            intent.putExtra(android.content.Intent.EXTRA_SUBJECT, title);
+            intent.putExtra(android.content.Intent.EXTRA_TEXT, message);
+            activity.startActivity(Intent.createChooser(intent, choicerTitle));
+        } catch (ActivityNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
