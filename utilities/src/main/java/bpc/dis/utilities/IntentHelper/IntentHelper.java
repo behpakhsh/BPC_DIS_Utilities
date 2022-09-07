@@ -10,9 +10,9 @@ import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
 
-import androidx.core.content.FileProvider;
-
 import java.io.File;
+
+import androidx.core.content.FileProvider;
 
 public class IntentHelper {
 
@@ -99,6 +99,28 @@ public class IntentHelper {
         }
     }
 
+    public static void openHttpUrl(Activity activity, String url) {
+        try {
+            if (!url.contains("http://")) {
+                url = "http://" + url;
+            }
+            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+        } catch (ActivityNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void openHttpsUrl(Activity activity, String url) {
+        try {
+            if (!url.contains("https://")) {
+                url = "https://" + url;
+            }
+            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+        } catch (ActivityNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void openUrl(Activity activity, String url) {
         try {
             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
@@ -110,14 +132,15 @@ public class IntentHelper {
 
     public static boolean openWhatsApp(Activity activity, String number) {
         try {
+            String url = "https://api.whatsapp.com/send?phone=" + number;
             activity.getPackageManager().getPackageInfo("com.whatsapp", PackageManager.GET_ACTIVITIES);
             Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse(number));
+            intent.setData(Uri.parse(url));
             activity.startActivity(intent);
-            return  true;
+            return true;
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
-            return  false;
+            return false;
         }
     }
 
