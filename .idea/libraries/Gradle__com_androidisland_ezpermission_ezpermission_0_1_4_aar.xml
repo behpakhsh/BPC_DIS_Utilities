@@ -3,6 +3,7 @@
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c47e019bd9d00ba3f67ce09f5228f93/jetified-ezpermission-0.1.4/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c47e019bd9d00ba3f67ce09f5228f93/jetified-ezpermission-0.1.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c47e019bd9d00ba3f67ce09f5228f93/jetified-ezpermission-0.1.4/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.androidisland.ezpermission/ezpermission/0.1.4/27ce9762bb9f7404eb5132d52bf237380e65d0d6/ezpermission-0.1.4-javadoc.jar!/" />

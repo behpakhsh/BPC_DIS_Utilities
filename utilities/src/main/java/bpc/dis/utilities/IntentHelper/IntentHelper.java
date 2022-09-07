@@ -5,6 +5,7 @@ import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
@@ -104,6 +105,19 @@ public class IntentHelper {
             activity.startActivity(browserIntent);
         } catch (ActivityNotFoundException e) {
             e.printStackTrace();
+        }
+    }
+
+    public static boolean openWhatsApp(Activity activity, String number) {
+        try {
+            activity.getPackageManager().getPackageInfo("com.whatsapp", PackageManager.GET_ACTIVITIES);
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse(number));
+            activity.startActivity(intent);
+            return  true;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+            return  false;
         }
     }
 

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:2:1-13:12
-INJECTED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:2:1-13:12
-INJECTED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:2:1-13:12
-INJECTED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:2:1-13:12
+ADDED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:2:1-13:12
+INJECTED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:2:1-13:12
+INJECTED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:2:1-13:12
+INJECTED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\h.sohrabifard\.gradle\caches\transforms-2\files-2.1\540778289d06c4fa11d81e37391dd9c8\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\h.sohrabifard\.gradle\caches\transforms-2\files-2.1\2184d643e3dc48ec088093bf4703920b\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\h.sohrabifard\.gradle\caches\transforms-2\files-2.1\a520967086ccd84018f9a66fbba3d080\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:17:1-24:12
@@ -24,25 +24,25 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\h.sohrabifard\.g
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\h.sohrabifard\.gradle\caches\transforms-2\files-2.1\b5a6f850a8cbad14b557755a4a739154\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\h.sohrabifard\.gradle\caches\transforms-2\files-2.1\01db54804b66b2b8f058ea79386ae547\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\h.sohrabifard\.gradle\caches\transforms-2\files-2.1\99cdd22df1372f469fb8c2408d666ead\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:2:1-13:12
-INJECTED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:2:1-13:12
-INJECTED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:2:1-13:12
+INJECTED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:2:1-13:12
+INJECTED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:2:1-13:12
+INJECTED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:2:1-13:12
 	package
-		ADDED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:3:5-32
-		INJECTED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
-		INJECTED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
+		ADDED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:3:5-32
+		INJECTED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
+		INJECTED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
-		ADDED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:2:1-13:12
-		INJECTED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
+		INJECTED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
+		ADDED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:2:1-13:12
+		INJECTED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
-		ADDED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:2:1-13:12
-		INJECTED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
+		INJECTED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
+		ADDED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:2:1-13:12
+		INJECTED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:5:5-11:55
+ADDED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:5:5-11:55
 MERGED from [androidx.core:core:1.3.0] C:\Users\h.sohrabifard\.gradle\caches\transforms-2\files-2.1\d9bb305304e1f9f46590942a079fc725\core-1.3.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.3.0] C:\Users\h.sohrabifard\.gradle\caches\transforms-2\files-2.1\d9bb305304e1f9f46590942a079fc725\core-1.3.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\h.sohrabifard\.gradle\caches\transforms-2\files-2.1\f6c967d4d0430ad205dda58018793e9b\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
@@ -50,21 +50,21 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\h.
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.0] C:\Users\h.sohrabifard\.gradle\caches\transforms-2\files-2.1\d9bb305304e1f9f46590942a079fc725\core-1.3.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:7:9-43
 	android:allowBackup
-		ADDED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:11:9-40
+		ADDED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml:11:9-40
 uses-sdk
-INJECTED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
-INJECTED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
+INJECTED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
+INJECTED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\h.sohrabifard\.gradle\caches\transforms-2\files-2.1\540778289d06c4fa11d81e37391dd9c8\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\h.sohrabifard\.gradle\caches\transforms-2\files-2.1\540778289d06c4fa11d81e37391dd9c8\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\h.sohrabifard\.gradle\caches\transforms-2\files-2.1\2184d643e3dc48ec088093bf4703920b\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -105,13 +105,13 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\h.sohrab
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\h.sohrabifard\.gradle\caches\transforms-2\files-2.1\01db54804b66b2b8f058ea79386ae547\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\h.sohrabifard\.gradle\caches\transforms-2\files-2.1\99cdd22df1372f469fb8c2408d666ead\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\h.sohrabifard\.gradle\caches\transforms-2\files-2.1\99cdd22df1372f469fb8c2408d666ead\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
-INJECTED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
-INJECTED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
+INJECTED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
+INJECTED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
-		ADDED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
-		INJECTED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
+		INJECTED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
+		ADDED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
+		INJECTED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
-		ADDED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
-		INJECTED from F:\Project\Behpaksh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
+		INJECTED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
+		ADDED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
+		INJECTED from F:\Project\Behpakhsh\JitPackLibrary\BPC_DIS_Utilities\BPC_DIS_Utilities\app\src\main\AndroidManifest.xml
