@@ -144,6 +144,16 @@ public class IntentHelper {
         }
     }
 
+    public static void openInstagram(Activity activity, String profileId) {
+        try {
+            activity.getPackageManager().getPackageInfo("com.instagram.android", 0);
+            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/_u/SarfeMarket")));
+        } catch (PackageManager.NameNotFoundException e) {
+            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://instagram.com/SarfeMarket")));
+            e.printStackTrace();
+        }
+    }
+
     public static void sendMessage(Activity activity, String message) {
         sendMessage(activity,
                 "لطفا پیام رسان خود را انتخاب کنید",
