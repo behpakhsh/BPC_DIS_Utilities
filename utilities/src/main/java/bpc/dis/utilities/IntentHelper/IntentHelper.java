@@ -147,9 +147,9 @@ public class IntentHelper {
     public static void openInstagram(Activity activity, String profileId) {
         try {
             activity.getPackageManager().getPackageInfo("com.instagram.android", 0);
-            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/_u/SarfeMarket")));
+            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/_u/" + profileId)));
         } catch (PackageManager.NameNotFoundException e) {
-            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://instagram.com/SarfeMarket")));
+            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://instagram.com/" + profileId)));
             e.printStackTrace();
         }
     }
