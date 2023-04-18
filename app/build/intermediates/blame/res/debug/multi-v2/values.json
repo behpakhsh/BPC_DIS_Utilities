@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\Project\\Behpakhsh\\JitPackLibrary\\BPC_DIS_Utilities\\BPC_DIS_Utilities\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "F:\\Project\\JitPackLibrary\\BPC_DIS_Utilities\\BPC_DIS_Utilities\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
-                    "source": "F:\\Project\\Behpakhsh\\JitPackLibrary\\BPC_DIS_Utilities\\BPC_DIS_Utilities\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "17",
-                        "endColumns": "54",
-                        "endOffsets": "67"
-                    },
-                    "to": {
-                        "startLines": "283",
-                        "startColumns": "4",
-                        "startOffsets": "18487",
-                        "endColumns": "54",
-                        "endOffsets": "18537"
-                    }
-                },
-                {
-                    "source": "F:\\Project\\Behpakhsh\\JitPackLibrary\\BPC_DIS_Utilities\\BPC_DIS_Utilities\\app\\src\\main\\res\\values\\colors.xml",
+                    "source": "F:\\Project\\JitPackLibrary\\BPC_DIS_Utilities\\BPC_DIS_Utilities\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
                         "startLines": "4,2,3",
                         "startColumns": "4,4,4",
@@ -35,6 +18,25 @@
                         "startOffsets": "2092,2138,2185",
                         "endColumns": "45,46,50",
                         "endOffsets": "2133,2180,2231"
+                    }
+                },
+                {
+                    "source": "F:\\Project\\JitPackLibrary\\BPC_DIS_Utilities\\BPC_DIS_Utilities\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endLines": "8",
+                        "endColumns": "12",
+                        "endOffsets": "376"
+                    },
+                    "to": {
+                        "startLines": "291",
+                        "startColumns": "4",
+                        "startOffsets": "19108",
+                        "endLines": "296",
+                        "endColumns": "12",
+                        "endOffsets": "19422"
                     }
                 },
                 {
@@ -95,22 +97,20 @@
                     }
                 },
                 {
-                    "source": "F:\\Project\\Behpakhsh\\JitPackLibrary\\BPC_DIS_Utilities\\BPC_DIS_Utilities\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "F:\\Project\\JitPackLibrary\\BPC_DIS_Utilities\\BPC_DIS_Utilities\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
-                        "startLines": "3",
+                        "startLines": "1",
                         "startColumns": "4",
-                        "startOffsets": "57",
-                        "endLines": "8",
-                        "endColumns": "12",
-                        "endOffsets": "376"
+                        "startOffsets": "17",
+                        "endColumns": "54",
+                        "endOffsets": "67"
                     },
                     "to": {
-                        "startLines": "291",
+                        "startLines": "283",
                         "startColumns": "4",
-                        "startOffsets": "19108",
-                        "endLines": "296",
-                        "endColumns": "12",
-                        "endOffsets": "19422"
+                        "startOffsets": "18487",
+                        "endColumns": "54",
+                        "endOffsets": "18537"
                     }
                 }
             ]

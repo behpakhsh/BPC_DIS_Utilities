@@ -77,6 +77,18 @@ public class IntentHelper {
         }
     }
 
+    public static void restartApp(Context context) {
+        try {
+            Intent intent = context.getPackageManager().getLaunchIntentForPackage(context.getPackageName());
+            if (intent != null) {
+                context.startActivity(Intent.makeRestartActivityTask(intent.getComponent()));
+                Runtime.getRuntime().exit(0);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void openAppPermissionSetting(Context context) {
         try {
             Intent intent = new Intent();
